@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.container {
+    padding: 0px 10px;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+:root {
+    --mycolor : #713366;
+}
+
+body {
+    font-family: tahoma;
+}
+
+/* nav start */
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--mycolor);
+    z-index: 9999;
+}
+
+nav .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav #mobileMenuBtn {
+    display: none;
+}
+
+nav .nav #mobileMenuBtn svg {
+    width: 35px;
+    height: 35px;
+    fill: #fff;
+    cursor: pointer;
+}
+
+nav .nav #logo {
+    color: #fff;
+    font-family: cursive;
+}
+
+nav .nav #menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav #menu li {
+    list-style-type: none;
+}
+
+nav .nav #menu li a {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    padding: 0px 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .nav #menu li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    nav .nav  {
+        min-height: 60px;
+        position: relative;
+    }
+    nav .nav #logo {
+        order: 2
+    }
+
+    nav .nav #mobileMenuBtn {
+        display: block;
+        order: 1;
+    }
+
+    nav .nav #menu {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--mycolor);
+        transition: 0.5s;
+        transform: translateX(-5000px);
+    }
+
+    nav .nav #menu.active_nav {
+        transition: 0.5s;
+        transform: translateX(0px);
+    }
+}
+
+/* nav end */
+
+
+/* header start */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+header .header_content {
+    max-width: 700px;
+    text-align: justify;
+    color: #fff;
+    text-shadow: 2px 2px black;
+    line-height: 35px;
+    padding: 20px;
+}
+
+header .header_content h1 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+header .header_content p {
+    font-size: 18px;
+    font-family: verdana;
+}
+
+header .header_content p::selection {
+    background: var(--mycolor);
+}
+
+header #scroll {
+    position: absolute;
+    bottom: 10px;
+}
+
+header #scroll svg {
+    width: 95px;
+    height: 95px;
+    fill: #fff;;
+    cursor: pointer;
+}
+
+
+/* header end */
+
+/* main start */
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 120px !important;
+}
+
+main .cbc {
+    text-align: center;
+    max-width: 700px;
+}
+
+main .cbc h1  {
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+main .cbc .social {
+    display: flex;
+    justify-content: center;
+}
+
+main .cbc .social a svg {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+/* main end */
